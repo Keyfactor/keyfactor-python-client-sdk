@@ -1,0 +1,68 @@
+from typing import Any, Dict, List, Type, TypeVar, Union, cast
+
+import attr
+
+from ..types import UNSET, Unset
+
+T = TypeVar("T", bound="KeyfactorApiModelsOrchestratorJobsAcknowledgeJobRequest")
+
+
+@attr.s(auto_attribs=True)
+class KeyfactorApiModelsOrchestratorJobsAcknowledgeJobRequest:
+    """
+    Attributes:
+        job_audit_ids (Union[Unset, List[int]]): List of orchestrator job audit ids to be acknowledged
+        query (Union[Unset, str]): Query identifying orchestrator jobs to be acknowledged
+    """
+
+    job_audit_ids: Union[Unset, List[int]] = UNSET
+    query: Union[Unset, str] = UNSET
+    additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
+
+    def to_dict(self) -> Dict[str, Any]:
+        job_audit_ids: Union[Unset, List[int]] = UNSET
+        if not isinstance(self.job_audit_ids, Unset):
+            job_audit_ids = self.job_audit_ids
+
+        query = self.query
+
+        field_dict: Dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update({})
+        if job_audit_ids is not UNSET:
+            field_dict["JobAuditIds"] = job_audit_ids
+        if query is not UNSET:
+            field_dict["Query"] = query
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: Type[T], src_dict: Dict[str, Any]) -> T:
+        d = src_dict.copy()
+        job_audit_ids = cast(List[int], d.pop("JobAuditIds", UNSET))
+
+        query = d.pop("Query", UNSET)
+
+        keyfactor_api_models_orchestrator_jobs_acknowledge_job_request = cls(
+            job_audit_ids=job_audit_ids,
+            query=query,
+        )
+
+        keyfactor_api_models_orchestrator_jobs_acknowledge_job_request.additional_properties = d
+        return keyfactor_api_models_orchestrator_jobs_acknowledge_job_request
+
+    @property
+    def additional_keys(self) -> List[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties

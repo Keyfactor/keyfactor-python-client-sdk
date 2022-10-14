@@ -1,0 +1,9 @@
+{
+	"URLbase": "KeyfactorAPI",
+	"scheme": "http",
+	"host": "192.168.78.139",
+	"user": "",
+	"pass": "",
+	"template": "WebServer",
+	"token":"S0VZRkFDVE9SXEFkbWluaXN0cmF0b3I6UGFzc3dvcmQx"
+}
