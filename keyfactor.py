@@ -929,7 +929,7 @@ scheme = config["scheme"]
 host = config["host"]
 URLBase = config["URLbase"]
 token = config["token"]
-kfclient = keyfactor.client.AuthenticatedClient(base_url=f"{scheme}://{host}/{URLBase}",prefix="Basic",token=token,verify_ssl=False)
+kfclient = keyfactor.client.AuthenticatedClient(base_url=f"{scheme}://{host}/{URLBase}",prefix="Basic",token=token,verify_ssl=True)
 
 def delete_ca_(sync=True, **kwargs):
   if sync:
