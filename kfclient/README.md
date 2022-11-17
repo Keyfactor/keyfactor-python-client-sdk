@@ -1,6 +1,11 @@
 # keyfactor-v-1-client
 A client library for accessing Keyfactor-v1
 
+## Install
+```bash
+pip install keyfactor-v-1-client
+```
+
 ## Usage
 First, create a client:
 
