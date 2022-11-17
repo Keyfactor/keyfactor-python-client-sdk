@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "keyfactor-v-1-client"
-version = "v1"
-description = "A client library for accessing Keyfactor-v1"
-
+version = "v1.0.3"
+description = "A client library for accessing Keyfactor Command-v1"
+homepage = "https://github.com/Keyfactor/keyfactor-python-client-sdk"
 authors = []
 
 readme = "README.md"
@@ -16,6 +16,7 @@ python = "^3.7"
 httpx = ">=0.15.4,<0.24.0"
 attrs = ">=21.3.0"
 python-dateutil = "^2.8.0"
+cryptography = "*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -37,3 +38,4 @@ exclude = '''
 [tool.isort]
 line_length = 120
 profile = "black"
+

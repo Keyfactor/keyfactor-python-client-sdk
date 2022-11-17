@@ -7,7 +7,7 @@
 # OR CONDITIONS OF ANY KIND, either express or implied. See the License for  
 # the specific language governing permissions and limitations under the       
 # License. 
-import keyfactor
+from keyfactor_v_1_client.wrappers import keyfactor
 from cryptography import x509
 from cryptography.x509.oid import NameOID
 from cryptography.hazmat.primitives.asymmetric import rsa
