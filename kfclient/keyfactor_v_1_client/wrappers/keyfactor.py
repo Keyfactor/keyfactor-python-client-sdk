@@ -1681,7 +1681,7 @@ def getJson(filename):
 
 
 try:
-    config = getJson(os.environ.get('KF_CONFIG', "environment.json"))
+    config = getJson(os.environ.get('KEYFACTOR_CONFIG', "environment.json"))
 except FileNotFoundError:
     config = {
         "host": os.environ.get('KEYFACTOR_HOSTNAME', ""),
@@ -1692,9 +1692,9 @@ except FileNotFoundError:
         "URLbase": os.environ.get('KEYFACTOR_URLBASE', "KeyfactorAPI"),
         "token": os.environ.get('KEYFACTOR_TOKEN', ""),
     }
-scheme = config["scheme"]
+scheme = config.get("scheme", "https")
 host = config["host"]
-URLBase = config["URLbase"]
+URLBase = config.get("URLbase", "KeyfactorAPI")
 token = config.get("token")
 if not token:
     username = config.get("username")
