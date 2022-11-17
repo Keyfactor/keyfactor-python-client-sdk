@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "keyfactor-v-1-client"
-version = "v1.0.1"
+version = "v1.0.3"
 description = "A client library for accessing Keyfactor Command-v1"
 homepage = "https://github.com/Keyfactor/keyfactor-python-client-sdk"
 authors = []
